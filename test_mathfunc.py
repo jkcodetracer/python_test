@@ -6,6 +6,13 @@ from mathfunc import *
 
 class TestMathFunc(unittest.TestCase):
 
+	""" to set some common environment before running testcases """
+	def setUp(self):
+		print ("do something before test!")
+
+	def tearDown(self):
+		print ("do something after test!")
+
 	def test_add(self):
 		self.assertEqual(3, add(1,2))
 		self.assertNotEqual(3, add(2,2))
