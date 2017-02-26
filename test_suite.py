@@ -10,6 +10,15 @@ if __name__ == '__main__':
 			TestMathFunc("test_divide")]
 	suite.addTests(tests)
 
+	# add single case
+	suite.addTest(TestMathFunc("test_multi"))
+	# use filename.classname to add all case
+	suite.addTests(unittest.TestLoader().loadTestsFromName('test_mathfunc.TestMathFunc'))
+	suite.addTests(unittest.TestLoader().loadTestsFromNames(['test_mathfunc.TestMathFunc']))
+
+	# use class name to load case
+	suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestMathFunc))
+
 	runner = unittest.TextTestRunner(verbosity = 2)
 
 	runner.run(suite)
