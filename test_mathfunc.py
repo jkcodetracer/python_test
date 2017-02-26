@@ -18,6 +18,8 @@ class TestMathFunc(unittest.TestCase):
 		self.assertNotEqual(3, add(2,2))
 	
 	def test_minus(self):
+		""" other function: skip(), skipIf() , skipUnless()"""
+		self.skipTest("do not run minus")
 		self.assertEqual(1, minus(3, 2))
 
 	@unittest.skip("skip function test_multi")
