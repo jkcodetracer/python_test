@@ -19,8 +19,11 @@ if __name__ == '__main__':
 	# use class name to load case
 	suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestMathFunc))
 
-	runner = unittest.TextTestRunner(verbosity = 2)
+	# run all test cases and save result to a file
+	with open('UnittestReport.txt', 'a') as f:
+		runner = unittest.TextTestRunner(stream = f, verbosity = 2)
+		runner.run(suite)
 
-	runner.run(suite)
+
 
 
