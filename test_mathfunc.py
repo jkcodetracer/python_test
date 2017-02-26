@@ -20,6 +20,7 @@ class TestMathFunc(unittest.TestCase):
 	def test_minus(self):
 		self.assertEqual(1, minus(3, 2))
 
+	@unittest.skip("skip function test_multi")
 	def test_multi(self):
 		self.assertEqual(6, multi(2,3))
 
